@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      @import url("./src/css/styles.css");
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./src/images/favicon.png" />
+  </head>
+  <body>
+    <!-- Sign-up -->
+    <div id="signinpage">
+      <div class="wrapper">
+        <div class="wrappercont">
+          <form id="loginpage">
+            <h1>Login</h1>
+            <div class="input-box">
+              <input
+                type="text"
+                placeholder="Username"
+                id="username"
+                required
+              />
+              <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-box">
+              <input
+                type="password"
+                placeholder="Password"
+                id="password"
+                required
+              />
+              <i class="bx bxs-lock-alt"></i>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox" />Remember Me</label>
+              <a href="#" id="forgotPasswordLink" onclick="showForgotPassword()"
+                >Forgot Password?</a
+              >
+            </div>
+            <button type="submit" class="btn">Login</button>
+          </form>
+        </div>
+        <div class="register-link">
+          <p>
+            Dont have an account?
+            <button onclick="registrationpage()">Register</button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register -->
+    <div id="registration">
+      <div class="wrapper">
+        <div class="wrappercont">
+          <form id="signup">
+            <h1>Register to continue...</h1>
+            <div class="input-box">
+              <input
+                type="text"
+                placeholder="Username"
+                id="newuser"
+                min="8"
+                max="16"
+                required
+              />
+              <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-box">
+              <input
+                type="password"
+                placeholder="Password"
+                id="newpassword"
+                required
+                min="6"
+                max="12"
+              />
+              <i class="bx bxs-lock-alt"></i>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+        <div class="register-link">
+          <p>
+            Already have an account?
+            <button onclick="openlogin()">Login</button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>
